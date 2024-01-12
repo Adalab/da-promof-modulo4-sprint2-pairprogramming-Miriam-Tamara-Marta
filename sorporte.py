@@ -46,7 +46,7 @@ df['Sentiment'].value_counts()
 # %%
 # %%
 def columnas_eliminar ():
-    columnas_eliminar = ['Year', 'Month', 'Day', 'Hour', 'Unnamed: 0.1']
+    columnas_eliminar = ['Year', 'Month', 'Day', 'Hour', 'Unnamed: 0']
     df.drop(columnas_eliminar, axis=1, inplace=True)
 
 columnas_eliminar()
@@ -152,4 +152,6 @@ def clasificar_estados(df, columna):
 # %%
 clasificar_estados(df,'Sentiment')
 df.head()
+# %%
+df.to_csv("ficheros/sentimentdataset.csv")
 # %%
